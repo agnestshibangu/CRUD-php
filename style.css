@@ -1,22 +1,70 @@
-.container {
+* {
+    font-family: 'Baloo 2', cursive;
+}
+
+body {
+    background-color: black;
+}
+
+.container-table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* .container {
     display: flex;
     height: fit-content;
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: thistle;
+    background-color: white;
     border-radius: 20px;
     flex-direction: column;
-}    
+}     */
 
 
 .table {
-    width: 90%;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    box-shadow: 5px 5px 20px rgb(255, 45, 227);
+    border-radius: 20px;
+
+}
+
+.table thead tr {
+    background-color: rgb(149, 70, 252);
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.table th, 
+.table td {
+    padding: 12px 15px;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid rgb(192, 55, 255);
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: rgb(213, 185, 250) ;
+}
+
+.table tbody tr {
+    background-color: rgb(206, 133, 255) ;
+}
+
+.table tbody tr:last-of-type {
+    border-bottom: 2px solid rgb(124, 47, 247);
 }
 
 
 .container-table {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -57,15 +105,18 @@ a {
 
 .btn-info {
     background-color: lightseagreen;
+    
 }
 
 .btn:hover {
     background-color: lightsalmon;
+    
+   
 }
 
 
 .input {
-    background-color: rgb(138, 255, 163);
+    background-color: rgb(183, 138, 255);
    
     border-radius: 20px;
     border: none;

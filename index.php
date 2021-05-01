@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -35,7 +37,7 @@
 
 
 
-<div class="container">
+
 
                 <div class="container-table">
 
@@ -45,9 +47,7 @@
                                     <th>Name</th>
                                     <th>Location</th>
                                     <th>Action</th> 
-
                                 </tr>
-
                             </thead>
 
                     <?php
@@ -97,7 +97,6 @@
                 </form>
             </div>
 
-        </div>
 
 
 
