@@ -3,8 +3,19 @@
 }
 
 body {
-    background-color: black;
+ 
+ background-color: black; 
+
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 5%;
+}
+
+
 
 .container-table {
     width: 100%;
@@ -70,18 +81,20 @@ body {
 }
 
 .container-form {
-    width: 30%;
+    width: 60%;
 }
 .form {
 
-    margin-top: 100px;
+    margin-top: 8%;
     display: flex;
     width: 100%; 
     flex-direction: column;
+    align-items: center;
 }
 
 .form-item {
     margin-top: 5px;
+    box-shadow: 4px 4px 10px rgb(255, 45, 227);
 }
 
 a {
@@ -94,39 +107,57 @@ a {
 .btn {
     border-radius: 10px;
     border: none;
-   color: grey;
+   color: white;
    padding: 3px;
+   width: 45%;
+   box-shadow: 4px 4px 10px rgb(255, 45, 227);
     
+}
+
+.btn-width {
+    margin-top: 10px;
 }
 
 .btn-delete {
-    background-color: lightsalmon;
+    background-color: rgb(199, 57, 255);
 }
 
 .btn-info {
-    background-color: lightseagreen;
+    background-color: rgb(50, 70, 255);
     
 }
 
+.th-action {
+    text-align: center;
+}
+
+.td-btn {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+}
+
 .btn:hover {
-    background-color: lightsalmon;
+    background-color: rgb(122, 135, 255);
     
-   
+    
 }
 
 
 .input {
     background-color: rgb(183, 138, 255);
-   
+    width: 100%;
     border-radius: 20px;
     border: none;
     height: 30px;
+    padding-left: 15px;
 }
 
 
 
 .btn-save {
-    background-color: lightblue;
+    background-color: rgb(50, 70, 255);
     margin-bottom: 20px;
     height: 30px;
 }
