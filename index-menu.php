@@ -13,7 +13,9 @@
 </head>
 <body>
 
-
+<a href="index2.php">
+   <i class="fas fa-home"></i>
+   </a>
 
         <?php  require_once 'process-menu.php';?>
     
@@ -26,8 +28,11 @@
         </form>
 
     </div>
+    
 
-<div class="container">
+
+
+    <div class="container">
 
             <div class="container-boxes">
 

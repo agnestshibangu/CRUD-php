@@ -7,7 +7,7 @@ body {
 }
 
 a {
-    color: rgb(255, 45, 227);
+    color: white;
 }
 
 
@@ -23,8 +23,9 @@ a {
 
 .container-quote {
     width: 100%;
-    background-color: rgb(255, 45, 227);
+    background-color: rgb(149, 70, 252);
     border-radius: 20px;
+    box-shadow: 5px 5px 20px rgb(255, 45, 227);
 }
 
 

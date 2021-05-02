@@ -3,7 +3,7 @@
 }
 body {
  
-    background-color: white; 
+    background-color: black; 
    
    }
 
@@ -12,15 +12,25 @@ a {
     
 }
 
+.fa-home {
+    font-size: 30px;
+    color : rgb(149, 70, 252);
+    margin: 10px 0 0 10px;
+    
+}
+
+
+
 .container-form {
     display: flex;
     justify-content: center;
+    margin-top: 100px;
 }
 
 .container {
     width: auto;
     height: auto;
-    background-color: white; 
+    background-color: black; 
 }
 
 
@@ -32,6 +42,7 @@ a {
     flex: wrap;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 50px;
 }
 
 .box, .box-add {
