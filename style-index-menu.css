@@ -1,0 +1,102 @@
+* {
+    font-family: 'Baloo 2', cursive;
+}
+body {
+ 
+    background-color: white; 
+   
+   }
+
+a {
+    text-decoration: none;
+    
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: auto;
+    height: auto;
+    background-color: white; 
+}
+
+
+.container-boxes {
+    display: flex; 
+    width: fit-content;
+    height: fit-content; 
+    margin-top: 50px;
+    flex: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box, .box-add {
+    width: 170px;
+    height: 120px;
+    background-color:rgb(149, 70, 252);
+    margin: 15px;
+    border-radius: 30px;
+    font-size: 0.9em;
+    box-shadow: 5px 5px 20px rgb(255, 45, 227);
+    border: none;
+  
+}
+
+.box-add {
+    
+    width: 150px;
+    height: 70px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.box-add:hover {
+    cursor: pointer;
+    background-color: rgb(122, 135, 255);
+}
+
+.fa-plus {
+    font-size: 30px;
+    color : white;
+}
+
+.input {
+    background-color: rgb(183, 138, 255);
+    width: 300px;
+    border-radius: 20px;
+    border: none;
+    height: 60px;
+    padding-left: 15px;
+    color: white;
+}
+
+.fa-trash-alt {
+    color: white;
+}
+
+.box-title {
+    position: absolute;
+   padding: 15px 15px;
+   width: 140px;
+   height: 60px;
+}
+
+.box-trash {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(255, 45, 227);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50% 0 50% 73%;
+
+
+}
