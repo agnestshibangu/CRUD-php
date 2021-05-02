@@ -2,6 +2,11 @@
     font-family: 'Baloo 2', cursive;
 }
 
+h1 {
+    color: rgb(255, 45, 227);
+
+}
+
 body {
  
  background-color: black; 
@@ -98,7 +103,7 @@ body {
 }
 
 a {
-    color: white;
+    color: black;
     text-decoration: none;
     
 }

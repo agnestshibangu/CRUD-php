@@ -14,6 +14,15 @@
 
 <div class="container">
 
+
+                
+
+
+
+    <h1><i class="fas fa-book"></i>Mon index de livres</h1>
+
+
+
         <?php require_once 'process.php'; ?>
 
         <?php 
@@ -53,7 +62,7 @@
                                             <a href="index.php?edit=<?php echo $row['id']; ?>"
                                             class="btn btn-info btn-action">Edit</a>
                                             <a href="index.php?delete=<?php echo $row['id']; ?>"
-                                            class="btn btn-delete btn-action">delete</a>
+                                            class="btn btn-delete btn-action">delete<i class="fas fa-trash-alt"></i></a>
                                         </td>
 
                             <?php endwhile; ?>

@@ -1,0 +1,36 @@
+* {
+    font-family: 'Baloo 2', cursive;
+}
+
+body {
+    background-color: black;
+}
+
+a {
+    color: rgb(255, 45, 227);
+}
+
+
+/* .arrow-index {
+    color: rgb(255, 45, 227)!important;
+} */
+
+.fa-arrow-right {
+    margin-top: 30px;
+    font-size: 30px;
+    
+}
+
+.container-quote {
+    width: 100%;
+    background-color: rgb(255, 45, 227);
+    border-radius: 20px;
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
