@@ -20,11 +20,25 @@ if (isset($_POST['save'])) {
 
 }
 
+if (isset($_POST['save'])) {
+    $sql = "CREATE TABLE tutorials_tbl( ".
+            "tutorial_id INT NOT NULL AUTO_INCREMENT, ".
+            "tutorial_title VARCHAR(100) NOT NULL, ".
+            "tutorial_author VARCHAR(40) NOT NULL, ".
+            "submission_date DATE, ".
+            "PRIMARY KEY ( tutorial_id )); ";
+    $mysqli->query($sql) or die($musqli->error);
+}
+
+
+
+
+
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
     $mysqli->query("DELETE FROM datas WHERE id=$id") or die($mysqli->error);
 
-    header("location: DATAS.php");
+    header("location: index-menu.php");
 
 }
 

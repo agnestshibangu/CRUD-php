@@ -5,7 +5,7 @@ $mysqli = new mysqli('localhost', 'root', '', 'crud') or die(mysqli_error($mysql
 $result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
 
 
-
+$tableName = '';
 $update = false;
 $name = '';
 $location ='';
