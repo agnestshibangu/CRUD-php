@@ -1,21 +1,23 @@
 <?php
 
 $mysqli = new mysqli('localhost', 'root', '', 'crud') or die(mysqli_error($mysqli));
+$title = $_GET['title'];
+$result = $mysqli->query("SELECT * FROM $title") or die($mysqli->error);
 
-$result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
 
 
-$tableName = '';
+
+
 $update = false;
 $name = '';
 $location ='';
 $id = 0;
 
 if (isset($_POST['save'])) {
-    $name = $_POST['name'];
-    $location = $_POST['location'];
+    $author = $_POST['tutorial_author'];
+    // $title = $_POST['title'];
 
-    $mysqli->query("INSERT INTO data (name, location) VALUES('$name', '$location')") or
+    $mysqli->query("INSERT INTO $title (tutorial_author) VALUES('$author')") or
     die($mysqli->error);
 
     header("location: index.php");
@@ -24,20 +26,21 @@ if (isset($_POST['save'])) {
 
 if  (isset($_GET['delete'])) {
     $id = $_GET['delete'];
-    $mysqli->query("DELETE FROM data WHERE id=$id") or die(mysqli_error($mysqli));
+    $title = $_GET['title'];
+    $mysqli->query("DELETE FROM $title WHERE tutorial_id = $id") or die(mysqli_error($mysqli));
 
     header("location: index.php");
 }
 
 if (isset($_GET['edit'])) {
+    $title = $_GET['title'];
     $id = $_GET['edit'];
     $update = true;
-    $result = $mysqli->query("SELECT * FROM data WHERE id=$id") or die($mysqli->error());
+    $result = $mysqli->query("SELECT * FROM $title WHERE id=$id") or die($mysqli->error());
   // if (count($result)==1) {
         $row = $result->fetch_array();
-        $name = $row['name'];
-        $location = $row['location'];
-        $id = $row['id'];
+        $author = $row['tutorial_id'];
+        $id = $row['tutorial_id'];
 
        
 
@@ -45,11 +48,10 @@ if (isset($_GET['edit'])) {
 }
 
 if (isset($_POST['update'])) {
-    $id = $_POST['id'];
-    $name = $_POST['name'];
-    $location = $_POST['location'];
+    $id = $_POST['tutorial_id'];
+    $author = $_POST['author'];
 
-    $mysqli->query("UPDATE data SET name='$name', location='$location' WHERE id=$id ") or die(mysqli_error($mysqli));
+    $mysqli->query("UPDATE $title SET author='$author' WHERE id=$id ") or die(mysqli_error($mysqli));
    
     header("location: index.php");
 

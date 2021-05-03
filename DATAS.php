@@ -14,7 +14,11 @@
 <body>
 
 
-    <?php require_once 'process-DATAS.php' ?>
+    <?php require_once 'process-DATAS.php';
+    
+
+
+    ?>
 
     <div class="container-form">
 
@@ -38,7 +42,7 @@
             while($table = $resultDatas->fetch_assoc()): ?>
               
                <div class="box">
-                   <a href="index.php?id=<?php echo $table['id']; ?>">
+                   <a href="index.php?title=<?php echo $table['title']; ?>">
                         <div class="box-title">
 
                             <?php echo $table['title']?>

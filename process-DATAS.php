@@ -3,8 +3,8 @@
 
 $mysqli = new mysqli('localhost', 'root', '', 'crud') or die(mysqli_error($mysqli));
 
-$resultDatas = $mysqli->query("SELECT * FROM datas ORDER by title ASC") or die($mysqli->error);
 
+$resultDatas = $mysqli->query("SELECT * FROM datas ORDER by title ASC") or die($mysqli->error);
 
 
 
@@ -21,13 +21,16 @@ if (isset($_POST['save'])) {
 }
 
 if (isset($_POST['save'])) {
-    $sql = "CREATE TABLE tutorials_tbl( ".
-            "tutorial_id INT NOT NULL AUTO_INCREMENT, ".
+    $title = $_POST['title'];
+    $sql = "CREATE TABLE $title ( ".
+            "id INT NOT NULL AUTO_INCREMENT, ".
             "tutorial_title VARCHAR(100) NOT NULL, ".
             "tutorial_author VARCHAR(40) NOT NULL, ".
             "submission_date DATE, ".
-            "PRIMARY KEY ( tutorial_id )); ";
+            "PRIMARY KEY ( id )); ";
     $mysqli->query($sql) or die($musqli->error);
+
+    header("location: DATAS.php");
 }
 
 
@@ -38,7 +41,7 @@ if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
     $mysqli->query("DELETE FROM datas WHERE id=$id") or die($mysqli->error);
 
-    header("location: index-menu.php");
+    header("location: DATAS.php");
 
 }
 

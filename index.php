@@ -19,17 +19,20 @@
 
 
 
-    <h1><i class="fas fa-book"></i>Mon index de livres</h1>
+    <h1><i class="fas fa-book"></i>  <?php echo $_GET['title'] ?></h1>
 
-
+       
 
         <?php require_once 'process.php'; ?>
 
         <?php 
-            $mysqli = new mysqli('localhost', 'root', '', 'crud') or die(mysqli_error($mysqli));
-            $result = $mysqli->query("SELECT * FROM data ORDER by name ASC") or die($mysqli->error);
         
-            
+            $mysqli = new mysqli('localhost', 'root', '', 'crud') or die(mysqli_error($mysqli));
+            $title = $_GET['title'];
+            $result = $mysqli->query("SELECT * FROM $title") or die($mysqli->error);
+
+          
+        
         ?>
 
 
@@ -56,12 +59,12 @@
                             <?php
                                 while($row = $result->fetch_assoc()): ?>
                                     <tr>
-                                        <td><?php echo $row['name']; ?></td>
-                                        <td><?php echo $row['location']; ?></td>
+                                        <td><?php echo $row['tutorial_title']; ?></td>
+                                        <td><?php echo $row['tutorial_author']; ?></td>
                                         <td class="td-btn">
-                                            <a href="index.php?edit=<?php echo $row['id']; ?>"
+                                            <a href="index.php?edit=<?php echo $row['tutorial_id']; ?>&title=<?php echo $title;?>"
                                             class="btn btn-info btn-action">Edit</a>
-                                            <a href="index.php?delete=<?php echo $row['id']; ?>"
+                                            <a href="process.php?delete=<?php echo $row['tutorial_id']; ?>&title=<?php echo $title;?>"
                                             class="btn btn-delete btn-action">delete<i class="fas fa-trash-alt"></i></a>
                                         </td>
 
